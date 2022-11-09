@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+<!--This is my resume that also serves as a quick demo of my html5 (and a bit of bootstrap) understanding.
+I am currently studying full stack development as a specialisation from the university of Hong Kong.
+I hope to have that done by the end of the year-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--Leaving this tag out because I'm hoping you got a modern browser ^^-->
+  <!--<meta http-equiv="x-ua-compatible" content="ie=edge"/> -->
+  <title>Classy Marty Resume</title>
+  <!--Using a CDN, but I would normally install this stuff with npm. nicer to have it local with some bundler like webpack-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <!--Some google font prettyness and them material icons. I love material design and try to use it often-->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--I like the icons from bootstrap-social... I know this is a lot of cdn calls from all over... so I 
+  would not do this in a production site ^^ -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css" rel="stylesheet">
+  <script src="https://use.fontawesome.com/26b4951183.js"></script>
+  <!-- just overiding the fonts with those pretty google fonts-->
+  <style>
+    h1 {
+      font-family: 'Press Start 2P', cursive;
+    }
+
+    body {
+      font-family: 'Press Start 2P', cursive;
+    }
+  </style>
+</head>
+
+<body class="bg-black text-success">
+
+  <!--simple nav bar that will link to the relivant parts of the page -->
+  <nav class="navbar navbar-expand-sm">
+    <div class="container">
+      <!--that cool little burger menu button for small screens-->
+      <button class="navbar-toggler button-success text-success" type="button" data-toggle="collapse"
+        data-target="#Navbar">
+        <span class="material-icons">
+          menu
+        </span>
+      </button>
+      <!--I did not have any good photos of me on hand... sorry. Ill put a facebook link so you can spy on me there-->
+      <a class="navbar-brand mr-auto" href="#">
+        <img class="img-fluid border border-success rounded" src="https://thumbs2.imgbox.com/5c/d3/duBNUpvb_t.jpg"
+          alt="Hosted image of my awesome face!" />
+      </a>
+      <h1>Classy Marty Resume</h1>
+      <div class="collapse navbar-collapse" id="Navbar">
+
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link active text-success" href="#introduction"><span class="material-icons">
+                waving_hand
+              </span> Introduction</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-success" href="#whyuneedme"><span class="material-icons">
+                psychology_alt
+              </span> Why you need me ^^</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-success" href="#workexperience"><span class="material-icons">
+                receipt_long
+              </span> Work Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-success" href="#contactme"><span class="material-icons">
+                connect_without_contact
+              </span> Contact Me</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!--Introduction card-->
+  <header>
+    <div class="container" id="introduction">
+      <div class="row">
+        <div class="card mb-3 bg-black border-success">
+          <div class="row g-0">
+            <div class="col-md-4 mr-3">
+              <img class="img-fluid border border-success rounded" src="https://thumbs2.imgbox.com/51/01/XQxgrmWU_t.png"
+                alt="Introduction" />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title border-bottom border-success">Introduction</h5>
+                <p class="card-text"></p>
+                <ul class="list-group">
+                  <li class="list-group-item bg-black text-success border border-success">Martin Grobbelaar</li>
+                  <li class="list-group-item bg-black text-success border border-success">ID no: 800212 5257 087</li>
+                  <li class="list-group-item bg-black text-success border border-success">South African Citizen</li>
+                </ul>
+                <p>I have been in the support industry for a large part of my career. I was often
+                  involved in project management and this sparked a very keen interest in skills development and
+                  transferring knowledge. I have also been focusing on uplifting those I can reach in terms of
+                  motivating and encouraging everyone to move forward and achieve more. My big dream is to someday be
+                  able to create opportunities for less fortunate people to join my world of wonders on the frontline of
+                  technology.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--The Why You Need Me card-->
+      <div class="row" id="whyuneedme">
+        <div class="card mb-3 bg-black border-success">
+          <div class="row g-0">
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title border-bottom border-success">Why you need me?</h5>
+                <!-- The old accordion... a function that is totally underutilised... crazy.
+                I had a really sad moment when I realised overriding the default accordion-button styles would require
+                messing with SASS and I just couldnt get that blue primary color border off with the cdn version... -->
+                <div class="accordion" id="skills-accordion">
+                  <!--Soft Skills-->
+                  <div class="accordion-item bg-black text-success border-success">
+                    <h2 class="accordion-header" id="softskills">
+                      <button class="accordion-button collapsed bg-black text-success border border-success"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#softskills-collapse"
+                        aria-expanded="false" aria-controls="softskills-collapse">
+                        <span class="material-icons">
+                          diversity_1
+                        </span>-Soft skills
+                      </button>
+                    </h2>
+                    <div id="softskills-collapse" class="accordion-collapse collapse" aria-labelledby="softskills"
+                      data-bs-parent="#skills-accordion">
+                      <div class="accordion-body">
+                        <ul>
+                          <li>
+                            I believe my most valuable asset is the ability to quickly aquire new skills.
+                          </li>
+                          <li>
+                            I am able to research independantly and can google so well!
+                          </li>
+                          <li>
+                            Very firm believer in skills transfer and development. I like to share what I learn for the
+                            advancement of the team.
+                          </li>
+                          <li>
+                            I have worked as a trauma counsellor, so am proficcient at conflict resolution and at
+                            handling various emotional situations
+                          </li>
+                        </ul>
+                        <div class="col">
+                          <div class="card card-body bg-black text-success">
+                            <blockquote class="blockquote align-self-center">
+                              <p class="mb-3">I know that I know nothing</p>
+                              <footer class="blockquote-footer text-success align-self-center">Plato,
+                                <cite title="Source Title">Plato's account of Socrates, long time ago</cite>
+                              </footer>
+                            </blockquote>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--software and hardware support-->
+                  <div class="accordion-item bg-black text-success border-success">
+                    <h2 class="accordion-header" id="sr-support">
+                      <button class="accordion-button collapsed bg-black text-success border border-success"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#sh-support-collapse"
+                        aria-expanded="false" aria-controls="sh-support-collapse">
+                        <span class="material-icons">
+                          support_agent
+                        </span>-Software and hardware support
+                      </button>
+                    </h2>
+                    <div id="sh-support-collapse" class="accordion-collapse collapse" aria-labelledby="sh-support"
+                      data-bs-parent="#skills-accordion">
+                      <div class="accordion-body">
+                        <ul>
+                          <li>
+                            Linux server technologies: various virtual enviroments and containers like Docker,
+                            Kubernetes and KVM. I am also familiar with monitoring tools like Zabbix and Kuma-Uptime
+                          </li>
+                          <li>
+                            Microsoft server technologies: At the Municipality, we supported an MPLS network with around
+                            7000 users. These were all managed by an active directory and they had a number of SQL
+                            servers as well as early hypervisors. I am also very interested in Azure technologies and
+                            hope to formally study them as well.
+                          </li>
+                          <li>
+                            End user support: As a support person you work as an abstraction layer for your product or
+                            services. Making things as effortless as possible for your users.
+                          </li>
+                          <li>
+                            Networking: I have a good understanding of networking technologies and am proficient at
+                            MikroTik routing and switching (the most disruptive technology I have seen in a long
+                            time...)
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!--CODING-->
+                  <div class="accordion-item bg-black text-success border-success">
+                    <h2 class="accordion-header" id="CODING">
+                      <button class="accordion-button collapsed bg-black text-success border border-success"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#CODING-collapse" aria-expanded="false"
+                        aria-controls="CODING-collapse">
+                        <span class="material-icons">
+                          code
+                        </span>-CODING!!!
+                      </button>
+                    </h2>
+                    <div id="CODING-collapse" class="accordion-collapse collapse" aria-labelledby="CODING"
+                      data-bs-parent="#skills-accordion">
+                      <div class="accordion-body">
+                        <ul>
+                          <li>
+                            I studied a lot of JAVA at the University of the People (along with Python, Algebra,
+                            Calculus and Statistics with R)
+                          </li>
+                          <li>
+                            I have had some exposure to c# via the Unity game engine (self taught and kind of like JAVA)
+                          </li>
+                          <li>
+                            I know some GDscript (not really anything to brag about... its a watered down Python). Godot is a very interesting game engine and I like the web deployment tools.
+                          </li>
+                          <li>
+                            I am currently doing a Full Stack Development specialisation with the University of Hong
+                            Kong. This is very exciting as I am learning Angular (I chose this because React seems
+                            simpler, so I want to formally learn the more complex platform and self-learn the easy
+                            stuff) and there will be some
+                            Mongodb and Node.js. I am mostly done with the Bootstrap course (This resume is the product
+                            of two weeks with Bootstrap). This
+                            specialisation should be complete by the end of the year.
+                          </li>
+                          <li>
+                            I have been learning Django and Fastapi (mostly interested in ASGI as it puts these
+                            backends close to node in terms of speed)
+                          </li>
+                          <li>
+                            As I formally studied some programming, I gained proficiency at source control technologies like local git, github and bitbucket. Life savers!
+                          </li>
+                        </ul>
+                        <p>The bottom line is that I am very keen on shifting my career to development as it has been a
+                          passion for many years. Derivco is the Holy Grail for developers and I would very much like
+                          any oppourtunity to do anything whatsoever in an organisation of this calibre. </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--Relivant Qualifications-->
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 ml-3">
+              <img src="https://thumbs2.imgbox.com/97/e9/JyDgZubZ_t.png" alt="image host" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- the work experience card-->
+      <div class="row" id="workexperience">
+        <div class="card mb-3 bg-black border-success">
+          <div class="row g-0">
+            <div class="col-md-4 mr-3">
+              <img src="https://thumbs2.imgbox.com/80/00/M26oaQHr_t.png" alt="image host" />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title border-bottom border-success">Relevant Work Experience</h5>
+                <table class="table table-borderless text-success">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Year</th>
+                      <th scope="col">Company</th>
+                      <th scope="col">Title</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>1994-1998</td>
+                      <td>La-Oma</td>
+                      <td>Caterer and function coordinator</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>1998-1999</td>
+                      <td>Nashua</td>
+                      <td>Workshop Technical support</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>1999-2001</td>
+                      <td>Picture Perfect Studio</td>
+                      <td>Desktop operator and technical advisor</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>2001-2003</td>
+                      <td>Sagem</td>
+                      <td>State Technical Cordinator</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">5</th>
+                      <td>2004-2006</td>
+                      <td>Seiko Teraoka</td>
+                      <td>Instruments Technician</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">6</th>
+                      <td>2006-2012</td>
+                      <td>Ethekwini Municipality</td>
+                      <td>Support Analyst</td>
+                    </tr>
+                    <th scope="row">7</th>
+                    <td>2015-now</td>
+                    <td>Freelancer</td>
+                    <td>Online tutor and contractor</td>
+                    <tr>
+                  </tbody>
+                </table>
+                <p> The most exciting parts of the work experience was going to Nigeria with Sagem for 18 months where I
+                  managed a project with around 670 people under me. The next part was the freelancing. This took me to
+                  China and I met many professionals in various fields from Spain, France, Turkey ext. It has opened my
+                  mind to international
+                  communities and very modern methadologies of top tier international companies.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </header>
+
+  <!--The footer did not get too much attention, The social buttons are cool-->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-4 offset-1 col-sm-2">
+          <h5>Links</h5>
+          <ul class="list-unstyled">
+            <li><a class="text-success" href="#introduction">Intro</a></li>
+            <li><a class="text-success" href="#whyuneedme">Skills</a></li>
+            <li><a class="text-success" href="#workexperience">Work</a></li>
+          </ul>
+        </div>
+        <div class="col-7 col-sm-5">
+          <h5>My Address</h5>
+          <address>
+            11a Prince Charles Road<br />
+            Dawncliffe, Westville<br />
+            South Africa<br />
+            <i class="fa fa-phone fa-lg"></i> +2761 308 1390<br />
+            <i class="fa fa-envelope fa-lg"></i>
+            <a href="ultrawyrm@gmail.com" class="text-success"> ultrawyrm@gmail.com</a>
+          </address>
+        </div>
+        <div class="col-12 col-sm-4 align-self-center" id="contactme">
+          <div class="text-center">
+            <h6>These are just for show (I'm not that famous)... its yet another cdn ^^</h6>
+            <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i
+                class="fa fa-google-plus fa-lg"></i></a>
+            <a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/martin.grobbelaar.56/"><i
+                class="fa fa-facebook fa-lg"></i></a>
+            <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i
+                class="fa fa-linkedin fa-lg"></i></a>
+            <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i
+                class="fa fa-twitter fa-lg"></i></a>
+            <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube fa-lg"></i></a>
+            <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o fa-lg"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-auto">
+          <p>© Copyright 2022 Classy Marty</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!--Loading the bootstrap js library. They ditched jquery after version 4 this bundle includes popper too-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
